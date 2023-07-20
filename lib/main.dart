@@ -2,18 +2,19 @@ import 'package:flutter/material.dart';
 import 'splash_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Your App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
       ),
-      home: SplashPage(), // Set the SplashPage as the home page
+      home: const Splash(), // Set the SplashPage as the home page
     );
   }
 }
