@@ -1,7 +1,25 @@
-import 'package:flutter/material.dart' show BuildContext, Center, Color, Colors, Column, Container, EdgeInsets, Expanded, Key, MainAxisAlignment, Row, Scaffold, StatelessWidget, Text, TextStyle, Widget;
+import 'package:flutter/material.dart';
+import 'home.dart';
 
-class SplashPage extends StatelessWidget {
-  const SplashPage({Key? key}) : super(key: key);
+class Splash extends StatefulWidget {
+  const Splash({Key? key}) : super(key: key);
+  @override
+  State<Splash> createState() => _SplashState();
+}
+
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    super.initState();
+    _navigatetohome();
+  }
+
+  _navigatetohome() async {
+    await Future.delayed(const Duration(milliseconds: 2800),
+        () {}); // ignore: use_build_context_synchronously Navigator.pushReplacement(
+    context;
+    MaterialPageRoute(builder: (context) => const home());
+  }
 
   @override
   Widget build(BuildContext context) {
